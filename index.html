@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>トラコメ合同会社 | 公式サイト</title>
+  <meta name="description" content="トラコメ合同会社の公式サイトです。会社概要、事業内容、運営方針、お問い合わせ先を掲載しています。" />
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --surface: #ffffff;
+      --text: #1f2328;
+      --muted: #5f6b76;
+      --line: #d9dee3;
+      --accent: #0f5e67;
+      --accent-soft: #e7f1f2;
+      --max: 1040px;
+      --radius: 14px;
+      --shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    header {
+      background: #ffffffee;
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 0;
+    }
+
+    .logo {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--text);
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .hero {
+      padding: 72px 0 44px;
+    }
+
+    .hero-box {
+      background: linear-gradient(180deg, #ffffff 0%, #fbfbfa 100%);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 42px 28px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 6px 10px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .lead {
+      margin: 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    section {
+      padding: 22px 0;
+    }
+
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px 22px;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 24px;
+      line-height: 1.3;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+    }
+
+    .info-table th,
+    .info-table td {
+      border-bottom: 1px solid var(--line);
+      padding: 14px 8px;
+      vertical-align: top;
+      text-align: left;
+      font-size: 15px;
+    }
+
+    .info-table th {
+      width: 180px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .note {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .policy-list,
+    .business-list {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .policy-list li,
+    .business-list li {
+      margin-bottom: 10px;
+    }
+
+    .contact-box {
+      background: #fcfcfb;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 18px;
+      margin-top: 12px;
+    }
+
+    footer {
+      padding: 40px 0 64px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-box {
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding-top: 36px;
+      }
+
+      .hero-box,
+      .section-card {
+        padding: 22px 16px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-table th,
+      .info-table td {
+        display: block;
+        width: 100%;
+        padding: 10px 4px;
+      }
+
+      .info-table th {
+        padding-bottom: 0;
+      }
+
+      nav {
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <div class="logo">トラコメ合同会社</div>
+      <nav>
+        <a href="#about">会社概要</a>
+        <a href="#business">事業内容</a>
+        <a href="#policy">運営方針</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-box">
+          <div class="badge">OFFICIAL WEBSITE</div>
+          <h1>トラコメ合同会社</h1>
+          <p class="lead">
+            当社は、暗号資産に関連する自己勘定運用、市場調査、リスク分析、業務管理体制の整備等を行う法人です。
+            事業内容および会社情報の公開を通じて、取引先各位に対し適切な情報提供に努めています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-card">
+          <h2>会社概要</h2>
+          <table class="info-table">
+            <tr>
+              <th>商号</th>
+              <td>トラコメ合同会社</td>
+            </tr>
+            <tr>
+              <th>法人種別</th>
+              <td>合同会社</td>
+            </tr>
+            <tr>
+              <th>本店所在地</th>
+              <td>栃木県芳賀郡茂木町大字小貫１４７－１</td>
+            </tr>
+            <tr>
+              <th>設立年月日</th>
+              <td>2026年4月14日</td>
+            </tr>
+            <tr>
+              <th>代表者</th>
+              <td>鈴木義幸</td>
+            </tr>
+            <tr>
+              <th>資本金</th>
+              <td>500万円</td>
+            </tr>
+            <tr>
+              <th>法人番号</th>
+              <td>2060003006029</td>
+            </tr>
+          </table>
+          <p class="note">※ 登記情報・申込情報と一致する内容をご入力ください。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="business">
+      <div class="container">
+        <div class="grid">
+          <div class="section-card">
+            <h2>事業内容</h2>
+            <ul class="business-list">
+              <li>暗号資産の保有、売買およびこれらに付随する自己勘定運用</li>
+              <li>暗号資産市場に関する調査、分析および情報収集</li>
+              <li>取引・残高管理・記録整備等に関する業務体制の構築</li>
+              <li>システム、ツールその他運用補助手段の企画・整備・管理</li>
+              <li>前各号に附帯または関連する一切の業務</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h2>事業の概要</h2>
+            <p>
+              当社は、自社資金を原資として暗号資産の保有および売買を行うとともに、
+              市場環境の分析、リスク管理、業務記録の整備を通じて、継続的な事業運営体制の構築に取り組んでいます。
+            </p>
+            <p>
+              また、業務効率化および内部管理のため、データ管理、集計、確認に関する体制整備を行っています。
+            </p>
+            <p>
+              なお、当社は顧客資産または第三者資金の預託を受けて運用する業務は行っておりません。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="policy">
+      <div class="container">
+        <div class="section-card">
+          <h2>運営方針</h2>
+          <ul class="policy-list">
+            <li>関係法令、各種規程および取引先の定めるルールを尊重し、適切な事業運営に努めます。</li>
+            <li>取引にあたっては、リスク管理、記録管理および情報管理の整備に努めます。</li>
+            <li>反社会的勢力との一切の関係を排除し、健全な事業活動を行います。</li>
+            <li>本人確認、登録情報管理および必要書類の整備を適切に行います。</li>
+            <li>公開情報については、必要に応じて更新し、正確性の維持に努めます。</li>
+          </ul>
+
+          <h3>補足事項</h3>
+          <p>
+            当社は、取引先との各種手続において必要となる会社情報、連絡先情報および事業内容の明確化に努めています。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-card">
+          <h2>お問い合わせ</h2>
+          <p>
+            当社に関するお問い合わせは、以下の連絡先までお願いいたします。
+          </p>
+          <div class="contact-box">
+            <p><strong>会社名：</strong>トラコメ合同会社</p>
+            <p><strong>担当者：</strong>鈴木義幸</p>
+            <p><strong>メールアドレス：</strong><a href="mailto:torakomegk@gmail.com">torakomegk@gmail.com</a></p>
+            <p><strong>受付時間：</strong>平日 10:00〜18:00 </p>
+          </div>
+          <p class="note">
+            ※ 実際に受信・返信できるメールアドレスをご入力ください。
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-box">
+      <p>© 2026 トラコメ合同会社 All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
